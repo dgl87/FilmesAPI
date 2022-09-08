@@ -1,4 +1,4 @@
-﻿namespace FilmesAPI.Data.Enderecos
+﻿namespace FilmesAPI.Data.Dtos.Enderecos
 {
     public class CreateEnderecoDto
     {
