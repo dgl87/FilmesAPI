@@ -40,5 +40,19 @@ namespace FilmesAPI.Controllers
 
             return CreatedAtAction(nameof(RecuperaGerentePorId), new { Id = gerente.Id }, gerente);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletaGerente(int id)
+        {
+            Gerente gerente = _context.Gerentes.FirstOrDefault(gerente => gerente.Id == id);
+            if (gerente == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(gerente);
+            _context.SaveChanges();
+
+            return NoContent();
+        }
     }
 }

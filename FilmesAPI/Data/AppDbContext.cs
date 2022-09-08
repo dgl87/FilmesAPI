@@ -20,7 +20,8 @@ namespace FilmesAPI.Data
             builder.Entity<Cinema>()
                 .HasOne(cinema => cinema.Gerente)
                 .WithMany(gerente => gerente.Cinemas)
-                .HasForeignKey(cinema => cinema.GerenteId);
+                .HasForeignKey(cinema => cinema.GerenteId); //.IsRequired(false); //permite que um cinema exista sem obrigação de ter uma chave de gerente, podendo ser null
+                //.OnDelete(DeleteBehavior.Restrict); //Retiramos deleçã em casacata
         }
 
         public DbSet<Filme> Filmes { get; set; }
