@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "1739aa6f-368b-48e6-8234-12203849f287",
+		"name": "Estudo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16129864"
+	},
+	"item": [
+		{
+			"name": "FilmeApi",
+			"item": [
+				{
+					"name": "Filme",
+					"item": [
+						{
+							"name": "AdicionaFilme",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Titulo\": \"O Senhor dos Anéis\",\r\n    \"Diretor\": \"Peter Jackson\",\r\n    \"Genero\": \"Aventura\",\r\n    \"Duracao\": 180\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/filme",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"filme"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaFilmes",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/filme",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"filme"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaFilmePorId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/Filme/2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"Filme",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AtualizaFilme",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Titulo\": \"Star Wars\",\r\n    \"Diretor\": \"George Lucas\",\r\n    \"Genero\": \"Ficção/Ação\",\r\n    \"Duracao\": 130\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/Filme/2",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"Filme",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletaFilme",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/Filme/8",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"Filme",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaFilmePorQuery",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/filme?classificacaoEtaria=12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"filme"
+									],
+									"query": [
+										{
+											"key": "classificacaoEtaria",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cinema",
+					"item": [
+						{
+							"name": "AdicionaCinema",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nome\": \"Alura Cinema\",\r\n    \"EnderecoId\": 1,\r\n    \"GerenteId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/cinema",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"cinema"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaCinemaPorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/cinema/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"cinema",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaCinemas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/cinema",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"cinema"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletaCinema",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/cinema/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"cinema",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaCinemaPorQueryParametersDeFilme",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/cinema?nomeDoFilme=Sin City",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"cinema"
+									],
+									"query": [
+										{
+											"key": "nomeDoFilme",
+											"value": "Sin City"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Endereço",
+					"item": [
+						{
+							"name": "AdicionaEndereco",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Logradouro\": \"Avenida Nossa Senhora de Copacabana\",\r\n    \"Bairro\": \"Copacabana\",\r\n    \"Numero\": 300\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/endereco",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"endereco"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaEnderecoPorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/endereco/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"endereco",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaEnderecos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/endereco",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"endereco"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Gerente",
+					"item": [
+						{
+							"name": "AdicionaGerente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nome\": \"Pedro Souza\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/gerente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"gerente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaGerentePorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/gerente/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"gerente",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletaGerente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/gerente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"gerente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sessão",
+					"item": [
+						{
+							"name": "AdicionaSessao",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CinemaId\": 4,\r\n    \"FilmeId\": 13,\r\n    \"HorarioDeEncerramento\": \"2002-01-01T21:00:00Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/sessao",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"sessao"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RecuperaSessaoPorId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/sessao/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"sessao",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
