@@ -3,6 +3,7 @@ using FilmesAPI.Data;
 using FilmesAPI.Data.Dtos.Cinemas;
 using FilmesAPI.Models;
 using FilmesAPI.Services;
+using FluentResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,13 +55,11 @@ namespace FilmesAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult AtualizaCinema(int id, [FromBody] UpdateCinemaDto cinemaDto)
         {
-            Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
-            if (cinema == null)
+            Result resultado = _cinemaService.AtualizaCinema(id, cinemaDto);
+            if (resultado.IsFailed)
             {
                 return NotFound();
             }
-            _mapper.Map(cinemaDto, cinema);
-            _context.SaveChanges();
 
             return NoContent();
         }
@@ -68,13 +67,11 @@ namespace FilmesAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteCinema(int id)
         {
-            Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
-            if (cinema == null)
+            Result resultado = _cinemaService.DeletaCinema(id);
+            if (resultado.IsFailed)
             {
                 return NotFound();
             }
-            _context.Remove(cinema);
-            _context.SaveChanges();
 
             return NoContent();
         }

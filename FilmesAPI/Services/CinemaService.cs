@@ -2,6 +2,7 @@
 using FilmesAPI.Data;
 using FilmesAPI.Data.Dtos.Cinemas;
 using FilmesAPI.Models;
+using FluentResults;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,32 @@ namespace FilmesAPI.Services
             }
 
             return null;
+        }
+
+        public Result AtualizaCinema(int id, UpdateCinemaDto cinemaDto)
+        {
+            Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
+            if (cinema == null)
+            {
+                return Result.Fail("Cinema não encontrado");
+            }
+            _mapper.Map(cinemaDto, cinema);
+            _context.SaveChanges();
+
+            return Result.Ok();
+        }
+
+        public Result DeletaCinema(int id)
+        {
+            Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
+            if (cinema == null)
+            {
+                return Result.Fail("Cinema não encontrado");
+            }
+            _context.Remove(cinema);
+            _context.SaveChanges();
+
+            return Result.Ok();
         }
     }
 }

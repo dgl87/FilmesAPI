@@ -1,12 +1,8 @@
-﻿using AutoMapper;
-using FilmesAPI.Data;
-using FilmesAPI.Data.Dtos.Filmes;
-using FilmesAPI.Models;
+﻿using FilmesAPI.Data.Dtos.Filmes;
 using FilmesAPI.Services;
+using FluentResults;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FilmesAPI.Controllers
 {
@@ -29,7 +25,7 @@ namespace FilmesAPI.Controllers
                 return Ok(readDto);
             }
 
-            return NotFound();            
+            return NotFound();
         }
 
         [HttpGet("{id}")]
@@ -41,7 +37,7 @@ namespace FilmesAPI.Controllers
                 return Ok(readDto);
             }
 
-            return NotFound();            
+            return NotFound();
         }
 
         [HttpPost]
@@ -55,13 +51,11 @@ namespace FilmesAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult AtualizaFilme(int id, [FromBody] UpdateFilmeDto filmeDto)
         {
-            Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
-            if (filme == null)
+            Result resultado = _filmeService.UpdateFilmeDto(id, filmeDto);
+            if (resultado.IsFailed)
             {
                 return NotFound();
             }
-            _mapper.Map(filmeDto, filme);
-            _context.SaveChanges();
 
             return NoContent();
         }
@@ -69,13 +63,11 @@ namespace FilmesAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeletaFilme(int id)
         {
-            Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
-            if (filme == null)
+            Result resultado = _filmeService.DeletaFilme(id);
+            if (resultado.IsFailed)
             {
                 return NotFound();
             }
-            _context.Remove(filme);
-            _context.SaveChanges();
 
             return NoContent();
         }
