@@ -22,7 +22,7 @@ namespace FilmesAPI.Services
             _context.Sessoes.Add(sessao);
             _context.SaveChanges();
 
-            return _mapper.Map<ReadSessaoDto>(sessaoDto);
+            return _mapper.Map<ReadSessaoDto>(sessao);
         }
 
         public ReadSessaoDto RecuperaSessaoPorId(int id)

@@ -23,7 +23,7 @@ namespace FilmesAPI.Services
             _context.Gerentes.Add(gerente);
             _context.SaveChanges();
 
-            return _mapper.Map<ReadGerenteDto>(gerenteDto);
+            return _mapper.Map<ReadGerenteDto>(gerente);
         }
 
         public ReadGerenteDto RecuperaGerentePorId(int id)

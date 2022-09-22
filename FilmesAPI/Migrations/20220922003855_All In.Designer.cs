@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FilmesAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220909133526_Adicionando Propriedade ClassificacaoEtaria")]
-    partial class AdicionandoPropriedadeClassificacaoEtaria
+    [Migration("20220922003855_All In")]
+    partial class AllIn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

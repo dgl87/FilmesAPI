@@ -24,7 +24,7 @@ namespace FilmesAPI.Services
             _context.Enderecos.Add(endereco);
             _context.SaveChanges();
 
-            return _mapper.Map<ReadEnderecoDto>(enderecoDto);
+            return _mapper.Map<ReadEnderecoDto>(endereco);
         }
 
         public List<ReadEnderecoDto> RecuperaEnderecos()

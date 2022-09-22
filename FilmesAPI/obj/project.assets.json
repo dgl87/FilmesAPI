@@ -7199,23 +7199,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\douglas.paiva\\.nuget\\packages\\": {},
+    "C:\\Users\\dglan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\douglas.paiva\\Desktop\\DGLZ\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+      "projectUniqueName": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
       "projectName": "FilmesAPI",
-      "projectPath": "C:\\Users\\douglas.paiva\\Desktop\\DGLZ\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
-      "packagesPath": "C:\\Users\\douglas.paiva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\douglas.paiva\\Desktop\\DGLZ\\FilmesAPI\\FilmesAPI\\obj\\",
+      "projectPath": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+      "packagesPath": "C:\\Users\\dglan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\douglas.paiva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dglan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7224,10 +7224,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://directoneapp.pkgs.visualstudio.com/_packaging/RogueOne/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/directoneapp/_packaging/OneToOneEngine/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/directoneapp/_packaging/OneToOneEngine2/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -7295,7 +7292,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

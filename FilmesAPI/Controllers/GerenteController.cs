@@ -28,7 +28,7 @@ namespace FilmesAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AdicionaGerente([FromBody] CreateGerenteDto gerenteDto)
+        public IActionResult AdicionaGerente(CreateGerenteDto gerenteDto)
         {
             ReadGerenteDto readDto = _gerenteService.AdicionaGerente(gerenteDto);
 
