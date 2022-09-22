@@ -30,8 +30,7 @@ namespace FilmesAPI.Services
             Sessao sessao = _context.Sessoes.FirstOrDefault(sessao => sessao.Id == id);
             if (sessao != null)
             {
-                ReadSessaoDto sessaoDto = _mapper.Map<ReadSessaoDto>(sessao);
-                return sessaoDto;
+                return _mapper.Map<ReadSessaoDto>(sessao);
             }
 
             return null;
