@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj": {}
+    "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\DGLZ\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj": {
+    "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\DGLZ\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+        "projectUniqueName": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\DGLZ\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
         "projectName": "FilmesAPI",
-        "projectPath": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+        "projectPath": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\DGLZ\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
         "packagesPath": "C:\\Users\\dglan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\APIs\\FilmesAPI\\FilmesAPI\\obj\\",
+        "outputPath": "C:\\Users\\dglan\\OneDrive\\Área de Trabalho\\DGLZ\\FilmesAPI\\FilmesAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
