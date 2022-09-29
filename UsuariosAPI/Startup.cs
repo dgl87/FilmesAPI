@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using UsuariosAPI.Data;
+using UsuariosAPI.Services;
 
 namespace UsuariosAPI
 {
@@ -27,6 +28,7 @@ namespace UsuariosAPI
             options.UseMySQL(Configuration.GetConnectionString("UsuarioConnection")));
             services.AddIdentity<IdentityUser<int>, IdentityRole<int>>()
                 .AddEntityFrameworkStores<UserDbContext>();
+            services.AddScoped<CadastroService, CadastroService>();
             services.AddControllers();
         }
 
@@ -36,8 +38,8 @@ namespace UsuariosAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UsuariosAPI v1"));
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UsuariosAPI v1"));
             }
 
             app.UseHttpsRedirection();
