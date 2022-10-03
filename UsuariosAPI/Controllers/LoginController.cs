@@ -1,5 +1,6 @@
 ﻿using FluentResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using UsuariosAPI.Data.Requests;
 using UsuariosAPI.Services;
 
@@ -22,9 +23,9 @@ namespace UsuariosAPI.Controllers
             Result resultado = _loginService.LogaUsuario(request);
             if (resultado.IsFailed)
             {
-                return Unauthorized();
+                return Unauthorized(resultado.Errors.FirstOrDefault());
             }
-            return Ok();
+            return Ok(resultado.Successes.FirstOrDefault());
         }
     }
 }

@@ -86,3 +86,8 @@ C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\n
 C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\ZstdNet.dll
 C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\FluentResults.dll
 C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\dglan\OneDrive\Área de Trabalho\DGLZ\FilmesAPI\UsuariosAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
