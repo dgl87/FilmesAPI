@@ -1,4 +1,4 @@
-﻿using FluentResults;
+﻿ using FluentResults;
 using Microsoft.AspNetCore.Identity;
 using UsuariosAPI.Data.Requests;
 
@@ -20,7 +20,7 @@ namespace UsuariosAPI.Services
             {
                 return Result.Ok();
             }
-            return Result.Fail("Login Falohou");
+            return Result.Fail("Login Falhou");
         }
     }
 }
