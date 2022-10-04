@@ -1,5 +1,6 @@
 ﻿using FluentResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using UsuariosAPI.Data.Dtos;
 using UsuariosAPI.Services;
 
@@ -24,7 +25,7 @@ namespace UsuariosAPI.Controllers
             {
                 return StatusCode(500);
             }
-            return Ok();
+            return Ok(resultado.Successes.FirstOrDefault());
         }
     }
 }

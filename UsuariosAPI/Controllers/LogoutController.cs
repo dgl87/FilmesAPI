@@ -1,5 +1,6 @@
 ﻿using FluentResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using UsuariosAPI.Services;
 
 namespace UsuariosAPI.Controllers
@@ -21,9 +22,9 @@ namespace UsuariosAPI.Controllers
             Result resultado = _logoutService.DeslogaUsuario();
             if (resultado.IsFailed)
             {
-                return Unauthorized(resultado.Errors);
+                return Unauthorized(resultado.Errors.FirstOrDefault());
             }
-            return Ok(resultado.Successes);
+            return Ok(resultado.Successes.FirstOrDefault());
         }
     }
 }
